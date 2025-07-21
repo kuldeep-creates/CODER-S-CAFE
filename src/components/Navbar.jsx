@@ -52,7 +52,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                 {'</>'}
               </span>
             </div>
-            <span className="font-['Bebas_Neue'] text-2xl absolute top-1/2 left-1/2 ">CODER'S CAFE</span>
+            <span className="font-['Bebas_Neue'] text-2xl">CODER'S CAFE</span>
           </div>
 
           {/* Desktop Menu */}
@@ -67,7 +67,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
             </button>
           </div>
 
-          {/* Mobile Menu Button
+          {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center">
             <button
               onClick={toggleDarkMode}
@@ -83,11 +83,11 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
-          </div> */}
+          </div>
         </div>
       </div>
 
-      {/* Mobile Menu
+      {/* Mobile Menu */}
       <div
         className={`md:hidden transition-all duration-300 overflow-hidden ${
           isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
@@ -100,7 +100,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
             onClick={() => setIsMenuOpen(false)}
           />
         </div>
-      </div> */}
+      </div>
     </nav>
   );
 };
