@@ -34,7 +34,7 @@ const Footer = ({ darkMode }) => {
             <FooterLink href="#domains">Courses</FooterLink>
             <FooterLink href="#team">Team</FooterLink>
             <FooterLink href="#events">Events</FooterLink>
-            <FooterLink href="https://mail.google.com/mail/?view=cm&fs=1&to=kuldeepjangid2008@gmail.com" target="_blank" rel="noopener noreferrer">
+            <FooterLink href="https://mail.google.com/mail/?view=cm&fs=1&to=coders.cafe.jec@gmail.com" target="_blank" rel="noopener noreferrer">
             Contact</FooterLink>
           </div>
         </div>
