@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://kuldeep-creates.github.io",
+  "homepage": "https://kuldeep-creates.github.io/CODER-S-CAFE",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
