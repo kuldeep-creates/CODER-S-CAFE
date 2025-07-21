@@ -52,7 +52,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                 {'</>'}
               </span>
             </div>
-            <span className="font-['Bebas_Neue'] text-2xl">CODER'S CAFE</span>
+            <span className="font-['Bebas_Neue'] text-2xl absolute top-1/2 left-1/2 ">CODER'S CAFE</span>
           </div>
 
           {/* Desktop Menu */}
