@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar.jsx';
 import Hero from './components/Hero.jsx';
 import Domains from './components/Domains.jsx';
@@ -62,15 +62,15 @@ function App() {
   );
 
   return (
-    <Router>
+    <Router basename={import.meta.env.DEV ? '/' : '/CODER-S-CAFE'}>
       <Routes>
         <Route path="/" element={
           <HomeLayout>
             <Hero darkMode={darkMode} />
             <WhyJoin darkMode={darkMode} />
             <Domains darkMode={darkMode} />
-            <TechStack darkMode={darkMode} />
-            <Team darkMode={darkMode} />
+            {/* <TechStack darkMode={darkMode} /> */}
+            {/* <Team darkMode={darkMode} /> */}
             <WeeklyChallenge darkMode={darkMode} />
             <Events darkMode={darkMode} />
           </HomeLayout>
