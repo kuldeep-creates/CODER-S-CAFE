@@ -7,37 +7,37 @@ const Team = ({ darkMode }) => {
     {
       name: "RAVIRANJAN KUMAR SINGH",
       role: "FULL STACK HEAD",
-      image: "https://media.licdn.com/dms/image/v2/D5603AQG0fRp-6TyWYQ/profile-displayphoto-shrink_400_400/B56ZZzJjP0GQAk-/0/1745688608111?e=1755734400&v=beta&t=kuEOSsA6UKPP_rOB3qNIBD4KogLefKwcSax-CMIGfP8",
+      image: "https://ongcvidesh.com/wp-content/uploads/2019/08/dummy-image.jpg",
       bio: "4 YEARS OF EXPERIENCE"
     },
     {
       name: "MANIKANT SINGH",
       role: "DATA SCIENCE AND ALGORITHM HEAD",
-      image: "https://media.licdn.com/dms/image/v2/D5603AQFwQUQUAJWDjg/profile-displayphoto-shrink_400_400/B56ZaR_tUFGoAk-/0/1746206120578?e=1755734400&v=beta&t=5h-_OSu3kXDrSFoo6398JIQBrnkA9u4itfE6IujeKzc",
+      image: "https://ongcvidesh.com/wp-content/uploads/2019/08/dummy-image.jpg",
       bio: "4 YEARS OF EXPERIENCE"
     },
     {
       name: "SACHIN SINGH",
       role: "DEV-OPS HEAD",
-      image: "https://media.licdn.com/dms/image/v2/D5603AQEeAfmkybEanQ/profile-displayphoto-shrink_400_400/B56ZWJH3nuGoAg-/0/1741762302461?e=1755734400&v=beta&t=2XI9t3bt8tPHqoWuSX1cgGGN83-Taa0AG3ejPluHdoE",
+      image: "https://ongcvidesh.com/wp-content/uploads/2019/08/dummy-image.jpg",
       bio: "4 YEARS OF EXPERIENCE"
     },
     {
       name: "HARSHDEEP BISNOI",
       role: "JAVA HEAD",
-      image: "https://media.licdn.com/dms/image/v2/D5603AQFucglZRgAM3A/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1710075886430?e=1755734400&v=beta&t=1lMYKLt-iTqcbn7vIz8r0tLm-4K-HUiLSsjkvcY31Cs",
+      image: "https://ongcvidesh.com/wp-content/uploads/2019/08/dummy-image.jpg",
       bio: "3 YEARS OF EXPERIENCE"
     },
     {
       name: "HIMANSHU MALI",
       role: "DATA SCIENCE AND ALGORITHM HEAD",
-      image: "https://media.licdn.com/dms/image/v2/D4D03AQF7Nl99hV7U9Q/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1694677039161?e=1755734400&v=beta&t=pzgQz4xQgxPjubHdy0D4KftRzORIYuRbuLGIlf49zT0",
+      image: "https://ongcvidesh.com/wp-content/uploads/2019/08/dummy-image.jpg",
       bio: "2 YEARS OF EXPERIENCE"
     },
     {
       name: "LAKSHYA ROHRA",
       role: "DATA SCIENCE HEAD",
-      image: "https://media.licdn.com/dms/image/v2/D5603AQGa0e4kc6oRmA/profile-displayphoto-shrink_400_400/B56ZdtmyE8GQAg-/0/1749890573698?e=1755734400&v=beta&t=-px4LiSS-TJEyXYL2jraFTdGeL-b2Lsa11-rOx0COf0",
+      image: "https://ongcvidesh.com/wp-content/uploads/2019/08/dummy-image.jpg",
       bio: "2 YEARS OF EXPERIENCE"
     }
   ];
