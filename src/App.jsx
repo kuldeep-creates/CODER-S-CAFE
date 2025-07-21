@@ -62,7 +62,7 @@ function App() {
   );
 
   return (
-    <Router basename="/CODER-S-CAFE">
+    <Router>
       <Routes>
         <Route path="/" element={
           <HomeLayout>
