@@ -5,7 +5,6 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
@@ -14,7 +13,6 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close mobile menu on resize
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 768) {
@@ -29,20 +27,15 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  // Google Form URL - replace with your actual form link
-  const googleFormUrl = 'https://forms.gle/YOUR_FORM_ID_HERE';
-
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out ${scrolled
-          ? `backdrop-blur-md shadow-lg py-2 px-6 rounded-none border-none 
+        ? `backdrop-blur-md shadow-lg py-2 px-6 rounded-none border-none 
      ${darkMode ? 'bg-blue-900/20' : 'bg-black/30'}`
-          : `backdrop-blur-sm border border-white/10 shadow-md py-2 px-6 mx-4 mt-4 rounded-xl 
+        : `backdrop-blur-sm border border-white/10 shadow-md py-2 px-6 mx-4 mt-4 rounded-xl 
      ${darkMode ? 'bg-blue-900/10' : 'bg-black/20'}`
-
         }`}
     >
-
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
@@ -57,18 +50,6 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-6">
             <NavLinks darkMode={darkMode} />
-            {/* <a
-              href={googleFormUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`px-4 py-2 rounded-md font-medium transition-all duration-200 ${
-                darkMode
-                  ? 'bg-white text-black hover:bg-gray-200'
-                  : 'bg-black text-white hover:bg-gray-800'
-              }`}
-            >
-              Join Us
-            </a> */}
             <button
               onClick={toggleDarkMode}
               className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors"
@@ -105,19 +86,6 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
       >
         <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
           <NavLinks darkMode={darkMode} mobile onClick={() => setIsMenuOpen(false)} />
-          {/* Mobile Join Us Button */}
-          <a
-            href={googleFormUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`px-4 py-2 rounded-md font-medium text-center ${darkMode
-                ? 'bg-white text-black hover:bg-gray-200'
-                : 'bg-black text-white hover:bg-gray-800'
-              }`}
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Join Us
-          </a>
         </div>
       </div>
     </nav>
