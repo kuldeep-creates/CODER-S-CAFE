@@ -24,18 +24,18 @@ const Domains = ({ darkMode }) => {
       description: 'Learn object-oriented programming with Java, focusing on enterprise applications and Android development.',
       path: '/courses/java'
     },
-    {
-      title: 'Data Science',
-      icon: <Database size={40} />,
-      description: 'Extract insights from data using statistical analysis, machine learning, and data visualization techniques.',
-      path: '/courses/datascience'
-    },
-    {
-      title: 'DevOps',
-      icon: <Server size={40} />,
-      description: 'Bridge development and operations with CI/CD pipelines, containerization, and cloud infrastructure.',
-      path: '/courses/devops'
-    },
+    // {
+    //   title: 'Data Science',
+    //   icon: <Database size={40} />,
+    //   description: 'Extract insights from data using statistical analysis, machine learning, and data visualization techniques.',
+    //   path: '/courses/datascience'
+    // },
+    // {
+    //   title: 'DevOps',
+    //   icon: <Server size={40} />,
+    //   description: 'Bridge development and operations with CI/CD pipelines, containerization, and cloud infrastructure.',
+    //   path: '/courses/devops'
+    // },
   ];
 
   const handleCardClick = (path) => {
