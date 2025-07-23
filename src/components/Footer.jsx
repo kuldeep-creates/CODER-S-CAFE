@@ -35,7 +35,7 @@ const Footer = ({ darkMode }) => {
 
         <div className="mt-8 text-center">
           <div className="flex flex-wrap justify-center gap-x-8 gap-y-4">
-            <FooterLink href="#home" darkMode={darkMode}>
+            <FooterLink href="https://kuldeep-creates.github.io/CODER-S-CAFE/" darkMode={darkMode}>
               Home
             </FooterLink>
             <FooterLink to="/about-us" darkMode={darkMode}>
