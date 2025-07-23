@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom'; // ✅ React Router link
 
 import img1 from './images/1.jpeg';
 import img2 from './images/2.jpeg';
@@ -10,8 +11,6 @@ import img5 from './images/5.jpeg';
 const RecentEvent = ({ darkMode }) => {
   const imageSets = [
     [img1, img2, img3, img4, img5],
-    // [img1, img2, img3, img4, img5],
-    // [img1, img2, img3, img4, img5],
   ];
 
   const eventDetails = [
@@ -23,25 +22,9 @@ const RecentEvent = ({ darkMode }) => {
 🥈 2nd Place: Krish Kumar
 🎖️ 3rd Place: Tanishka Pundhir`,
     },
-//     {
-//       title: 'Hackathon 2.0',
-//       description: `Innovation meets execution! On 10th March 2025, young tech enthusiasts gathered to code their ideas into reality. 💡💻
-
-// 🥇 1st Place: Aryan Raj
-// 🥈 2nd Place: Meera Chaudhary
-// 🎖️ 3rd Place: Ankit Yadav`,
-//     },
-//     {
-//       title: 'WebDev Showcase',
-//       description: `Frontend finesse and backend brilliance! 🔥
-
-// ✨ Neha Sharma – Best Design
-// 🚀 Rohan Verma – Most Functional
-// 🎯 Muskan Agarwal – Best Innovation`,
-//     },
   ];
 
-  const [indices, setIndices] = useState([0, 0, 0]);
+  const [indices, setIndices] = useState([0]);
 
   const handleChange = (eventIdx, direction) => {
     setIndices((prev) =>
@@ -62,9 +45,10 @@ const RecentEvent = ({ darkMode }) => {
         darkMode ? 'bg-[#0a0a0a] text-white' : 'bg-[#f7f7f7] text-black'
       }`}
     >
+      {/* 🔗 Updated Button */}
       <div className="flex justify-center mb-12">
-        <a
-          href="#upcoming-events"
+        <Link
+          to="/upcoming"
           className={`px-7 py-3 rounded-full text-sm font-semibold shadow-md backdrop-blur-md transition-all duration-300 
             ${darkMode 
               ? 'bg-white/10 text-white border border-white/30 hover:bg-white/20' 
@@ -72,7 +56,7 @@ const RecentEvent = ({ darkMode }) => {
             }`}
         >
           🌟 Explore Upcoming Events
-        </a>
+        </Link>
       </div>
 
       <div className="flex flex-col gap-20 items-center">

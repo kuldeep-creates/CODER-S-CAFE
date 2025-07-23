@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom';
 const NavLinks = ({ darkMode, mobile = false, onClick }) => {
   const links = [
     { name: 'Domain', path: '/domains' },
-    { name: 'Challenges', path: '/Challenges' },
+    { name: 'Challenges', path: '/Challenge' },
     { name: 'Events', path: '/event' }, // working route link
-    { name: 'Team', path: '/#team' },
+    // { name: 'Team', path: '/#team' },
   ];
 
   return (

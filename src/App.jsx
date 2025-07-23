@@ -18,6 +18,9 @@ import DataSciencePage from './components/courses/datascience.jsx';
 import DevOpsPage from './components/courses/devops.jsx';
 import ImageGrid from './components/ImageGrid.jsx';
 import Events from './components/Events.jsx'; // ✅ Page Component for /event
+import Challenges from './components/Challenges.jsx';
+import UpcomingEvent from './components/UpcomingEvent.jsx';
+import AboutUs from './components/AboutUs.jsx';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -81,6 +84,10 @@ function App() {
         <Route path="/courses/datascience" element={<CourseLayout><DataSciencePage darkMode={darkMode} /></CourseLayout>} />
         <Route path="/courses/devops" element={<CourseLayout><DevOpsPage darkMode={darkMode} /></CourseLayout>} />
         <Route path="/domains" element={<CourseLayout><Domains darkMode={darkMode} /></CourseLayout>} />
+        <Route path="/challenge" element={<CourseLayout><Challenges darkMode={darkMode} /></CourseLayout>} />
+        <Route path="/upcoming" element={<CourseLayout><UpcomingEvent darkMode={darkMode} /></CourseLayout>} />
+        <Route path="/about-us" element={<CourseLayout><AboutUs darkMode={darkMode} /></CourseLayout>} />
+
 
         {/* ✅ Events Page Route */}
         <Route path="/event" element={
