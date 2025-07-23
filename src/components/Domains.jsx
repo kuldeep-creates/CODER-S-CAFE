@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code, Globe, Coffee, Database, Server } from 'lucide-react';
+import { Code, Globe, Coffee } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const Domains = ({ darkMode }) => {
@@ -8,103 +8,90 @@ const Domains = ({ darkMode }) => {
   const domains = [
     {
       title: 'Data Structures & Algorithms',
-      icon: <Code size={40} />,
-      description: 'Master fundamental algorithms and data structures essential for efficient problem-solving and optimized code.',
-      path: '/courses/dsa'
+      icon: <Code size={42} />,
+      description: 'Master algorithms and data structures for optimized problem-solving and coding interviews.',
+      path: '/courses/dsa',
     },
     {
       title: 'Full Stack Development',
-      icon: <Globe size={40} />,
-      description: 'Build complete web applications from front-end interfaces to back-end servers, databases, and everything in between.',
-      path: '/courses/fullstack'
+      icon: <Globe size={42} />,
+      description: 'Build modern web apps with frontend, backend, databases, and deployment.',
+      path: '/courses/fullstack',
     },
     {
       title: 'Java Programming',
-      icon: <Coffee size={40} />,
-      description: 'Learn object-oriented programming with Java, focusing on enterprise applications and Android development.',
-      path: '/courses/java'
+      icon: <Coffee size={42} />,
+      description: 'Learn Java OOP, Android development, and enterprise-level programming.',
+      path: '/courses/java',
     },
-    // {
-    //   title: 'Data Science',
-    //   icon: <Database size={40} />,
-    //   description: 'Extract insights from data using statistical analysis, machine learning, and data visualization techniques.',
-    //   path: '/courses/datascience'
-    // },
-    // {
-    //   title: 'DevOps',
-    //   icon: <Server size={40} />,
-    //   description: 'Bridge development and operations with CI/CD pipelines, containerization, and cloud infrastructure.',
-    //   path: '/courses/devops'
-    // },
   ];
 
   const handleCardClick = (path) => {
-    console.log('Navigating to:', path);
     navigate(path);
   };
 
   return (
-    <section 
-      id="domains" 
-      className={`py-20 px-4 ${
-        darkMode ? 'bg-black' : 'bg-white'
-      }`}
+    <section
+      id="domains"
+      className={`relative py-36 px-4 md:px-12 overflow-hidden ${darkMode ? 'bg-[#0a0f1a] text-white' : 'bg-[#f5f7fa] text-black'
+        }`}
     >
-      <div className="container mx-auto">
-        <h2 className={`font-['Bebas_Neue'] text-4xl md:text-5xl text-center mb-12 ${
-          darkMode ? 'text-white' : 'text-black'
-        }`}>
-          OUR COURSES
-        </h2>
+      {/* Background Grid - More Visible */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <div
+          className={`w-full h-full bg-[radial-gradient(currentColor_1px,transparent_1px)] [background-size:16px_16px] ${darkMode ? 'text-white/15' : 'text-black/20'
+            }`}
+        />
+      </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="relative z-10 max-w-7xl mx-auto text-center animate-fade-in">
+
+        <h2
+          className={`text-4xl md:text-5xl font-bold font-mono tracking-wide mb-4 ${darkMode ? 'text-white' : 'text-black'
+            }`}
+        >
+          ▍ Explore Our Domains
+        </h2>
+        <p className="text-md font-mono text-gray-400 mb-16 max-w-2xl mx-auto">
+          Build, break, and rebuild. Choose your battlefield — and master it.
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-4">
           {domains.map((domain, index) => (
-            <div 
+            <div
               key={index}
               onClick={() => handleCardClick(domain.path)}
-              className={`group relative p-6 rounded-lg transition-all duration-300 cursor-pointer ${
-                darkMode 
-                  ? 'bg-gradient-to-br from-gray-900 to-gray-800 hover:from-gray-800 hover:to-gray-700 text-white' 
-                  : 'bg-gradient-to-br from-gray-100 to-white hover:from-gray-200 hover:to-gray-100 text-black'
-              } shadow-md hover:shadow-xl`}
+              className={`group p-6 rounded-xl backdrop-blur-md cursor-pointer transition-all duration-300 hover:scale-[1.03] relative overflow-hidden border ${darkMode
+                  ? 'bg-white/5 border-white/10 hover:bg-white/10'
+                  : 'bg-white border-black/10 hover:bg-gray-100'
+                }`}
             >
-              <div className="flex flex-col h-full">
-                <div className="flex justify-center mb-4">
-                  <div className={`${
-                    darkMode ? 'text-white' : 'text-black'
-                  } transition-transform duration-300 group-hover:scale-110`}>
-                    {domain.icon}
-                  </div>
+              <div className="flex flex-col items-center gap-4 h-full">
+                <div className={`text-xl ${darkMode ? 'text-white' : 'text-black'}`}>
+                  {domain.icon}
                 </div>
-                
-                <h3 className={`font-['Bebas_Neue'] text-xl md:text-2xl text-center mb-3`}>
+                <h3 className="text-xl font-semibold text-center font-mono tracking-wide">
                   {domain.title}
                 </h3>
-                
-                <p className="text-center mb-6 text-sm md:text-base opacity-80 flex-grow">
+                <p className="text-center text-sm text-gray-400 font-mono leading-relaxed">
                   {domain.description}
                 </p>
-                
-                <div className="text-center mt-auto">
-                  <button
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      handleCardClick(domain.path);
-                    }}
-                    className={`px-4 py-2 rounded border-2 transition-all duration-300 ${
-                      darkMode 
-                        ? 'border-white text-white hover:bg-white hover:text-black' 
-                        : 'border-black text-black hover:bg-black hover:text-white'
-                    }`}
-                  >
-                    Learn More
-                  </button>
-                </div>
+
+                {/* Button with Modern Hover Effect */}
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleCardClick(domain.path);
+                  }}
+                  className={`mt-6 px-6 py-2 text-xs font-semibold rounded-full tracking-wider font-mono uppercase transition-all duration-300 transform 
+                    ${darkMode
+                      ? 'bg-white text-black hover:scale-105 hover:shadow-[0_0_12px_rgba(255,255,255,0.4)]'
+                      : 'bg-black text-white hover:scale-105 hover:shadow-[0_0_12px_rgba(0,0,0,0.2)]'}
+                  `}
+                >
+                  Learn More
+                </button>
               </div>
-              
-              <div className={`absolute inset-0 transition-opacity duration-300 opacity-0 group-hover:opacity-10 ${
-                darkMode ? 'bg-white' : 'bg-black'
-              }`}></div>
             </div>
           ))}
         </div>

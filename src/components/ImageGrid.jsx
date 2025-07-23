@@ -53,10 +53,10 @@ const ImageGrid = ({ darkMode }) => {
   return (
     <div className="py-10 px-4 max-w-6xl mx-auto">
       <h2
-        className={`font-bold text-4xl md:text-5xl text-center mb-8 tracking-wide ${darkMode ? "text-white" : "text-black"}`}
+        className={`text-3xl md:text-5xl text-center mb-8 tracking-wide ${darkMode ? "text-white" : "text-black"}`}
         style={{ fontFamily: "Bebas Neue, sans-serif" }}
       >
-        Success Stories
+        Testimonials
       </h2>
 
       <div className="relative overflow-hidden">

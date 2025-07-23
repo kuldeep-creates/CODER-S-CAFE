@@ -1,6 +1,21 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  // tailwind.config.js
+theme: {
+  extend: {
+    animation: {
+      shimmer: 'shimmer 2s infinite linear',
+    },
+    keyframes: {
+      shimmer: {
+        '0%': { transform: 'translateX(-100%)' },
+        '100%': { transform: 'translateX(100%)' },
+      },
+    },
+  },
+},
+
   theme: {
     extend: {
       fontFamily: {
@@ -34,6 +49,18 @@ export default {
       },
     },
   },
+  extend: {
+  animation: {
+    'fade-in': 'fadeIn 0.8s ease-out',
+  },
+  keyframes: {
+    fadeIn: {
+      '0%': { opacity: 0, transform: 'translateY(20px)' },
+      '100%': { opacity: 1, transform: 'translateY(0)' },
+    },
+  },
+}
+,
   darkMode: 'class',
   plugins: [],
 };

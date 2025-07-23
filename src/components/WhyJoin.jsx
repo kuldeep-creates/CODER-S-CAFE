@@ -54,7 +54,7 @@ const WhyJoin = ({ darkMode }) => {
         <h2 className={`font-['Bebas_Neue'] text-4xl md:text-5xl text-center mb-16 ${
           darkMode ? 'text-white' : 'text-black'
         }`}>
-          WHY JOIN CODER'S CAFE?
+          WHAT IS CODER'S CAFE?
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
