@@ -70,17 +70,20 @@ const ImageGrid = ({ darkMode }) => {
           {images.map((img, idx) => (
             <div
               key={idx}
-              className="card flex flex-col items-center bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 min-w-[268px] w-64 flex-shrink-0"
+              className="card flex flex-col items-center bg-gray-400 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 min-w-[268px] w-64 flex-shrink-0"
             >
-              <div className="w-full aspect-square bg-gray-100 flex items-center justify-center overflow-hidden rounded-t-xl">
+              <div className="w-full aspect-square bg-gray-600 flex items-center justify-center overflow-hidden rounded-t-xl">
                 <img
                   src={img.src}
                   alt={img.desc}
-                  className="object-cover w-full h-full hover:opacity-90 transition-opacity duration-300"
+                  className={`object-cover w-full h-full filter ${darkMode ? 'brightness-75' : 'brightness-90'
+                    } hover:brightness-100 transition-all duration-300`}
                 />
+
+
               </div>
               <div
-                className="p-4 w-full text-center border-t border-gray-100 backdrop-blur-md bg-blue-200/30 dark:bg-blue-400/20"
+                className="p-4 w-full text-center border-t border-gray-500 backdrop-blur-md bg-blue-200/30 dark:bg-blue-400/20"
                 style={{
                   boxShadow: "0 4px 30px rgba(0, 118, 255, 0.1)",
                   borderRadius: "0 0 0.75rem 0.75rem",
