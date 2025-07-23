@@ -8,13 +8,13 @@ const Team = ({ darkMode }) => {
       name: "RAVIRANJAN KUMAR SINGH",
       role: "FULL STACK HEAD",
       image: "https://ongcvidesh.com/wp-content/uploads/2019/08/dummy-image.jpg",
-      bio: "4 YEARS OF EXPERIENCE"
+      bio: "4rth YEAR"
     },
     {
       name: "MANIKANT SINGH",
       role: "DATA SCIENCE AND ALGORITHM HEAD",
       image: "https://ongcvidesh.com/wp-content/uploads/2019/08/dummy-image.jpg",
-      bio: "4 YEARS OF EXPERIENCE"
+      bio: "4"
     },
     {
       name: "SACHIN SINGH",
@@ -38,7 +38,7 @@ const Team = ({ darkMode }) => {
       name: "LAKSHYA ROHRA",
       role: "DATA SCIENCE HEAD",
       image: "https://ongcvidesh.com/wp-content/uploads/2019/08/dummy-image.jpg",
-      bio: "2 YEARS OF EXPERIENCE"
+      bio: "2nd YEAR"
     }
   ];
 

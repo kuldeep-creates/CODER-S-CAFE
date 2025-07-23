@@ -1,5 +1,7 @@
+// src/App.jsx
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 import Navbar from './components/Navbar.jsx';
 import Hero from './components/Hero.jsx';
 import Domains from './components/Domains.jsx';
@@ -7,7 +9,6 @@ import WhyJoin from './components/WhyJoin.jsx';
 import Events from './components/Events.jsx';
 import SuccessStories from './components/SuccessStories.jsx';
 import WeeklyChallenge from './components/WeeklyChallenge.jsx';
-import TechStack from './components/TechStack.jsx';
 import Team from './components/Team.jsx';
 import Footer from './components/Footer.jsx';
 import ParticleBackground from './components/ParticleBackground.jsx';
@@ -17,6 +18,7 @@ import FullStackPage from './components/courses/fullstack.jsx';
 import JavaPage from './components/courses/java.jsx';
 import DataSciencePage from './components/courses/datascience.jsx';
 import DevOpsPage from './components/courses/devops.jsx';
+import ImageGrid from './components/ImageGrid.jsx';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -39,9 +41,7 @@ function App() {
     }
   }, [darkMode]);
 
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-  };
+  const toggleDarkMode = () => setDarkMode(!darkMode);
 
   const HomeLayout = ({ children }) => (
     <div className={`relative min-h-screen transition-colors duration-300 ${darkMode ? 'bg-black text-white' : 'bg-white text-black'}`}>
@@ -69,8 +69,7 @@ function App() {
             <Hero darkMode={darkMode} />
             <WhyJoin darkMode={darkMode} />
             <Domains darkMode={darkMode} />
-            {/* <TechStack darkMode={darkMode} /> */}
-            {/* <Team darkMode={darkMode} /> */}
+            <ImageGrid darkMode={darkMode} />
             <WeeklyChallenge darkMode={darkMode} />
             <Events darkMode={darkMode} />
           </HomeLayout>

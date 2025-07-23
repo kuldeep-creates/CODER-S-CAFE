@@ -88,7 +88,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
       </div>
 
       {/* Mobile Menu */}
-      <div
+      {/* <div
         className={`md:hidden transition-all duration-300 overflow-hidden ${
           isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
         } ${darkMode ? 'bg-black' : 'bg-white'}`}
@@ -100,7 +100,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
             onClick={() => setIsMenuOpen(false)}
           />
         </div>
-      </div>
+      </div> */}
     </nav>
   );
 };
